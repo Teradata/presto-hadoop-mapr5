@@ -10,7 +10,7 @@
 
     <groupId>com.facebook.presto.hadoop</groupId>
     <artifactId>hadoop-mapr5</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
 
     <name>hadoop-mapr5</name>
     <description>Shaded version of MapR 5.x for Presto</description>
@@ -241,6 +241,11 @@
                                     <pattern>org.slf4j</pattern>
                                     <shadedPattern>${shadeBase}.org.slf4j</shadedPattern>
                                 </relocation>
+                                <relocation>
+                                    <pattern>javax.servlet</pattern>
+                                    <shadedPattern>${shadeBase}.javax.servlet</shadedPattern>
+                                </relocation>
+
                                 <relocation>
                                     <pattern>org.apache.log4j</pattern>
                                     <shadedPattern>${shadeBase}.org.apache.log4j</shadedPattern>
